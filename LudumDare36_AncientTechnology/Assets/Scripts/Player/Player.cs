@@ -5,6 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(PlayerRotation))]
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerBouncing))]
+[RequireComponent(typeof(PlayerHands))]
 public class Player : MonoBehaviour {
 
 	[HideInInspector]
@@ -34,7 +35,7 @@ public class Player : MonoBehaviour {
 		get 
 		{
 			// calculate if the player is on the ground
-			return Physics.Raycast(transform.position, -Vector3.up, distToGround + .1f);
+			return Physics.Raycast(transform.position + Vector3.up*.2f, -Vector3.up, distToGround + .35f);
 		}
 	}
 }
