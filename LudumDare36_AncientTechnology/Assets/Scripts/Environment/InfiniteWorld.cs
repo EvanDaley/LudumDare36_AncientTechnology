@@ -9,13 +9,19 @@ public class InfiniteWorld : MonoBehaviour {
 
 	void Start () 
 	{
-		for (int i = -1; i < 2; i++)
+		for (int i = -3; i < 4; i++)
 		{
-			for (int j = -1; j < 2; j++)
+			for (int j = -3; j < 4; j++)
 			{
 				GameObject tile = GameObject.Instantiate (grassPrefabs [count % grassPrefabs.Length], new Vector3(i * 16, 0, j*16), Quaternion.identity) as GameObject;
+				count++;
 			}
 		}
+	}
+
+	void UpdateMap()
+	{
+
 	}
 	
 	// Update is called once per frame
