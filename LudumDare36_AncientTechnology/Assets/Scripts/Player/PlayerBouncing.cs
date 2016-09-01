@@ -13,6 +13,6 @@ public class PlayerBouncing : Player {
 		float horSpeed = Input.GetAxis ("Horizontal");
 		float verSpeed = Input.GetAxis ("Vertical");
 
-		print (base.IsGrounded);
+		//print (base.IsGrounded);
 	}
 }

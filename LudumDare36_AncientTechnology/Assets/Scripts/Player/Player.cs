@@ -6,6 +6,7 @@ using System.Collections;
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerBouncing))]
 [RequireComponent(typeof(PlayerHands))]
+[RequireComponent(typeof(Tag))]
 public class Player : MonoBehaviour {
 
 	[HideInInspector]
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour {
 	public PlayerMovement PlayerMovement;
 	[HideInInspector]
 	public Rigidbody rbody;
+	[HideInInspector]
+	public Tag myTag;
 
 	private float distToGround;
 
@@ -24,6 +27,7 @@ public class Player : MonoBehaviour {
 		PlayerTargeting = GetComponent < PlayerTargeting > ();
 		PlayerRotation = GetComponent < PlayerRotation > ();
 		PlayerMovement = GetComponent < PlayerMovement > ();
+		myTag = GetComponent < Tag > ();
 
 		rbody = GetComponent< Rigidbody > ();
 		Collider collider = GetComponent< Collider > ();
